@@ -1,0 +1,47 @@
+auto-reload yes
+max-items 0
+refresh-on-startup yes
+reload-threads 100
+show-read-feeds no
+show-read-articles no
+prepopulate-query-feeds yes
+
+color background          default   default
+color listnormal          default   default
+color listnormal_unread   default   default
+color listfocus           default   default
+color listfocus_unread    default   default   bold
+color info                default   default
+color article             default   default
+
+# highlights
+highlight article "^(Feed|Link):.*$" default default bold
+highlight article "^(Title|Date|Author):.*$" default default bold
+highlight article "https?://[^ ]+" default default underline
+highlight article "\\[[0-9]+\\]" default default bold
+highlight article "\\[image\\ [0-9]+\\]" default default bold
+highlight feedlist "^─.*$" default default bold
+
+highlight feedlist "\\(Youtube\\) .*" red
+highlight feedlist "\\(Twitter\\) .*" blue
+highlight feedlist "\\(Reddit\\) .*" green
+highlight feedlist "\\(Podcast\\) .*" magenta
+highlight feedlist "\\(Blog\\) .*" cyan
+
+bind-key h quit
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key H prev-feed
+bind-key L next-feed
+bind-key g home
+bind-key G end
+bind-key SPACE macro-prefix 
+bind-key b bookmark 
+bind-key ^F pagedown 
+bind-key ^B pageup 
+bind-key ^H toggle-show-read-feeds 
+
+feedlist-format "%?T?║%4i %n %8u (%T) %t ?"
+
+browser "librewolf"
