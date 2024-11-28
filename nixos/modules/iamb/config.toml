@@ -28,3 +28,9 @@ style = "restore"
 
 [macros.normal]
 "gd" = ":chats<Enter>"
+"r" = ":reply<Enter>"
+"E" = '"+P'
+"t" = "<C-W>m"
+"<C-g>" = ":redact"
+"<C-J>" = "<C-D>"
+"<C-K>" = "<C-U>"
