@@ -50,13 +50,6 @@
     emacs.enable = true;
     newsboat.enable = true;
     home-manager.enable = true;
-    obs-studio = {
-      enable = true;
-      plugins = [
-        pkgs.obs-studio-plugins.wlrobs
-        pkgs.obs-studio-plugins.obs-pipewire-audio-capture
-      ];
-    };
 
     # zsh stuff
     zsh = {
@@ -138,9 +131,6 @@
 
   # iamb source file
   home.file."/.config/iamb/config.toml".source = ./modules/iamb/config.toml;
-
-  # mpd source file
-  home.file."/.config/mpd/mpd.conf".source = ./modules/mpd/mpd.conf;
 
 }
 
